@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <link rel="stylesheet" href="exercicio01.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn1').click(function () {
+                $('#div1').addClass("estilo1");
+                $('#div2').addClass("estilo2");
+                $('#div3').addClass("estilo3");
+                $('#div4').addClass("estilo4");
+                $('#div5').addClass("estilo5");
+                $('div').slideUp(4000);
+            })
+            $('#btn2').click(function () {
+                $('div').addClass("estiloAzul");
+            })
+
+            $('#btn3').dblclick(function () {
+                $('#div1, #div2').hide('slow');
+            })
+
+            $('input, select').focus(function () {
+                $(this).addClass("agradavel")
+
+            })
+            $('input, select').blur(function () {
+                $(this).removeClass("agradavel")
+
+            })
+            $('#enviar').click(function () {
+                $('span').html("Seu nome: " + $("#nome").val() + " Seu email: " + $("#email").val());
+
+            })
+
+        })
+    </script>
+
+</head>
+
+<body>
+
+    <section>
+    <div id="div1">1</div>
+    <div id="div2">2</div>
+    <div id="div3">3</div>
+    <div id="div4">4</div>
+    <div id="div5">5</div>
+    </section>
+    <br style="clear:both;">
+    <button id="btn1">Alterar Estilos</button>
+    <button id="btn2">Padronizar um Estilo</button>
+    <button id="btn3">Esconder Double Click</button>
+    <br><br>
+
+    <form>
+        <label>Nome:</label>
+        <br><br>
+        <input type="text" id="nome">
+        <br><br>
+        <label>Endereço:</label>
+        <br><br>
+        <input type="text">
+        <br><br>
+        <label>Telefone:</label>
+        <br><br>
+        <input type="text">
+        <br><br>
+        <label>E-mail:</label>
+        <br><br>
+        <input type="text" id="email">
+        <br><br>
+        <label>CPF:</label>
+        <br><br>
+        <input type="text">
+        <br><br>
+        <label>Estado:</label>
+        <br><br>
+        <select>
+            <option>Selecione</option>
+            <option>AC</option>
+            <option>AL</option>
+            <option>AP</option>
+            <option>AM</option>
+            <option>BA</option>
+            <option>CE</option>
+            <option>DF</option>
+            <option>ES</option>
+            <option>GO</option>
+            <option>MA</option>
+            <option>MT</option>
+            <option>MS</option>
+            <option>MG</option>
+            <option>PA</option>
+            <option>PB</option>
+            <option>PR</option>
+            <option>PE</option>
+            <option>PI</option>
+            <option>RJ</option>
+            <option>RN</option>
+            <option>RS</option>
+            <option>RO</option>
+            <option>RR</option>
+            <option>SC</option>
+            <option>SP</option>
+            <option>SE</option>
+            <option>TO</option>
+        </select>
+    </form>
+    <br><br>
+    <button id="enviar">ENVIAR</button>
+    <br><br>
+    <span></span>
+    
+</body>
+
+</html>

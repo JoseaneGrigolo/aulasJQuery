@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("#detach").click(function () {
+        $('ol').detach();
+      })
+      $("#empt").click(function () {
+        $('div').empty();
+      })
+      $("#remv").click(function () {
+        $('div').remove();
+      })
+    });
+  </script>
+</head>
+
+<body>
+  <ol>
+    <li>Lista 1</li>
+    <li>Lista 2</li>
+    <li>Lista 3</li>
+  </ol>
+
+  <div style="background-color: rgb(229, 160, 220); height:200px; width:400px;">
+    <h1>Inicio</h1>
+    <ol>
+      <li>Lista 4</li>
+      <li>Lista 5</li>
+      <li>Lista 6</li>
+    </ol>
+    <h2>Fim</h2>
+
+  </div>
+
+  <button id="detach"> Botao Detach</button>
+  <button id="empt"> Botao Empty</button>
+  <button id="remv"> Botao Remove</button>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <style>
+        button {
+            height: 50px;
+            width: 150px;
+            font-size: 20px;
+            margin: 5px;
+        }
+        button:hover {
+            background: linear-gradient(to top, rgb(13, 182, 224), rgb(47, 228, 41));
+            color: white
+        }
+        div {
+            background: linear-gradient(to top, rgb(221, 113, 131) 50%, rgb(6, 196, 243));
+            width: 400px;
+            height: 400px;
+            font-size: 30px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#um").click(function () {
+                $('div').hide();
+            })
+            $("#dois").click(function () {
+                $('div').show();
+            })
+            $("#tres").click(function () {
+                $('div').toggle(4000);
+            })
+            $("#quatro").click(function () {
+                $('div').fadeIn(4000);
+            })
+            $("#cinco").click(function () {
+                $('div').fadeOut(4000);
+            })
+            $("#seis").click(function () {
+                $('div').fadeTo('slow', 0.5);
+            })
+            $("#sete").click(function () {
+                $('div').fadeToggle('slow');
+            })
+            $("#oito").click(function () {
+                $('div').slideUp(3000);
+            })
+            $("#nove").click(function () {
+                $('div').slideDown(3000);
+            })
+            $("#dez").click(function () {
+                $('div').slideToggle(3000);
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <div>Aplicando Efeitos...</div>
+    <br><br>
+    <button id="um">Hide</button>
+    <button id="dois">Show</button><br><br>
+    <button id="tres">Toggle</button>
+    <button id="quatro">FadeIn</button><br><br>
+    <button id="cinco">FadeOut</button>
+    <button id="seis">FadeTo</button><br><br>
+    <button id="sete">FadeToggle</button>
+    <button id="oito">SlideUp</button><br><br>
+    <button id="nove">SlideDown</button>
+    <button id="dez">SlideToggle</button>
+</body>
+
+</html>
